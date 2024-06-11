@@ -1,0 +1,114 @@
+<html>
+    <head><meta http-equiv="Content-Type"
+        content="text/html; charset=UTF-8">
+        <link href="style.css" rel="stylesheet" />
+        <title>
+        8byteRAM制作日記
+        </title>
+    </head>
+    <body>
+        <header>
+            <h1 class="box1">Terraria's Workshop</h1>
+        </header>
+        <main>
+        <header>
+            <h2>
+                8byteRAM制作日記
+            </h2>
+        </header>
+        皆さんこんにちはTerraria's Workshopです。<br>
+        今回は8byteRAMを制作していきます。<br>
+        目次
+        <ul>
+            <li>
+                <a href="#section1">RAMとは何か？</a>
+            </li>
+            <li>
+                <a href="#section2">どうやってRAMを作るか思考する</a>
+            </li>
+            <li>
+                <a href="#section3">空中配線していく</a>
+            </li>
+            <li>
+                <a href="#section4">筐体を作る</a>
+            </li>
+        </ul>
+        <header>
+            <h3 id="section1">
+                RAMとは何か？
+            </h3>
+        </header>
+        RAMとはRandom Access Memory の略称であり、コンピュータの記憶装置の一つである。<br>
+        RAMは揮発性メモリ(電源を落とすとデータが消えてしまうメモリ)であるが、epromやpromなどと違い理論上無限回書き込みが行える。
+
+
+        <header>
+            <h3 id="section2">どうやってRAMを作るか思考する</h3>
+        </header>
+        8byteメモリを作るには次のことを考えなくてはいけない
+        <ul>
+            <li>
+                どのICを使うのか
+            </li>
+            <li>
+                何に配線するのか
+            </li>
+            <li>
+                規模はどのぐらいになるのか
+            </li>
+        </ul>
+        <header>
+            <h4>
+                ICについて
+            </h4>
+        </header>
+        メモリとして使うことができるICは以下の3つである
+        <ul>
+            <li>
+                RS-latch
+            </li>
+            <li>
+                D-latch
+            </li>
+            <li>
+                D-flipflop
+            </li>
+            <li>
+                JK-flipflop
+            </li>
+        </ul>
+        今回はこれらの回路の中でも一番扱いやすいD-flipflop(個人の感想です)を使っていこうと思います。<br>
+        汎用ロジックICにおいて、74HC74がD-flipflop回路にあたる。<br>
+        <figure>
+            <img src="74hc74.png">
+            <figcaption>
+                74HC74AP
+            </figcaption>
+        </figure>
+        74HC74にはD-flipflopが2ユニット入っているため、8byteメモリを作るのに必要な74HC74の数は<br>
+        8(byte)×8(bit)/2(ユニット)=32(個)
+        
+        <header>
+            <h3 id="section3">空中配線していく</h3>
+        </header>
+
+
+        <header>
+            <h4 id="section4">筐体を作る</h4>
+        </header>
+        </main>
+        <ul class="ulbox">
+            その他の記事はここから見てね！
+            <li>
+            <a href="index.html">
+                ほーむぺーじ
+            </a>
+            </li>
+            <li>
+            <a href="ALU.html">
+                ALU制作日記
+            </a>
+            </li>
+        </ul>
+    </body>
+</html>
