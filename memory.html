@@ -13,11 +13,10 @@
         <main>
         <header>
             <h2>
-                8byteRAM制作日記
+                8byteRAM製作日記
             </h2>
         </header>
-        皆さんこんにちはTerraria's Workshopです。<br>
-        今回は8byteRAMを制作していきます。<br>
+        今回は8byteRAMを製作していく。<br>
         目次
         <ul>
             <li>
@@ -45,7 +44,7 @@
         <header>
             <h3 id="section2">どうやってRAMを作るか思考する</h3>
         </header>
-        8byteメモリを作るには次のことを考えなくてはいけない
+        8byteメモリを作るには次のことを考えなくてはいけない。
         <ul>
             <li>
                 どのICを使うのか
@@ -62,7 +61,7 @@
                 ICについて
             </h4>
         </header>
-        メモリとして使うことができるICは以下の3つである
+        メモリとして使うことができるICは以下の3つである。
         <ul>
             <li>
                 RS-latch
@@ -77,7 +76,7 @@
                 JK-flipflop
             </li>
         </ul>
-        今回はこれらの回路の中でも一番扱いやすいD-flipflop(個人の感想です)を使っていこうと思います。<br>
+        今回はこれらの回路の中でも一番扱いやすいD-flipflop(個人の感想です)を使っていこうと思う。<br>
         汎用ロジックICにおいて、74HC74がD-flipflop回路にあたる。<br>
         <figure>
             <img src="74hc74.png">
@@ -87,14 +86,33 @@
         </figure>
         74HC74にはD-flipflopが2ユニット入っているため、8byteメモリを作るのに必要な74HC74の数は<br>
         8(byte)×8(bit)/2(ユニット)=32(個)
-        
+
         <header>
+            <h4>
+                配線と規模について
+            </h4>
+        </header>
+        8byteメモリを配線するつまり、32個の74HC74を配線するのは簡単ではなく、回路の規模も大きくなる。<br>
+        とりあえず4bitメモリをユニバーサル基板上で再現する。<br>
+        <figure>
+            <img src="kiban1.png">
+            <figcaption>
+                4bitメモリ
+            </figcaption>
+        </figure>
+        
+        実際に配線して感じたことは<strong>大変すぎ!!</strong>この一言に尽きる。<br>
+        4bitの配線を組むだけでほぼ8時間かかった。さらに、必要な基板数はおよそ8枚。
+        CPU製作において、メモリだけで8段も使ってしまうと今ある基板だけでは足りず、
+        追加で購入しなくてはならないうえに、配線だけで多くの時間を浪費してしまう。
+        そこで小型化と配線の簡略化のために、<strong>空中配線</strong>採用することにした。<br>
+        
             <h3 id="section3">空中配線していく</h3>
         </header>
-
+        
 
         <header>
-            <h4 id="section4">筐体を作る</h4>
+            <h3 id="section4">筐体を作る</h3>
         </header>
         </main>
         <ul class="ulbox">
