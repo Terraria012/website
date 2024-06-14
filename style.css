@@ -55,3 +55,7 @@ img {
     max-height: 200px;
 }
 
+.imgbox {
+    max-width: 300px;
+    max-height: 700px;
+}
