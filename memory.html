@@ -3,7 +3,7 @@
         content="text/html; charset=UTF-8">
         <link href="style.css" rel="stylesheet" />
         <title>
-        8byteRAM制作日記
+        8byteレジスタ制作日記
         </title>
     </head>
     <body>
@@ -13,17 +13,17 @@
         <main>
         <header>
             <h2>
-                8byteRAM製作日記
+                8byteレジスタ製作日記
             </h2>
         </header>
-        今回は8byteRAMを製作していく。<br>
+        今回は8byteレジスタを製作していく。<br>
         目次
         <ul>
             <li>
-                <a href="#section1">RAMとは何か？</a>
+                <a href="#section1">レジスタとは何か？</a>
             </li>
             <li>
-                <a href="#section2">どうやってRAMを作るか思考する</a>
+                <a href="#section2">どうやってレジスタを作るか思考する</a>
             </li>
             <li>
                 <a href="#section3">空中配線していく</a>
@@ -34,20 +34,20 @@
         </ul>
         <header>
             <h3 id="section1">
-                RAMとは何か？
+                レジスタとは何か？
             </h3>
         </header>
-        RAMとはRandom Access Memory の略称であり、コンピュータの記憶装置の一つである。<br>
+        レジスタとは、CPU記憶装置であり、CPUで行われた計算結果を一時的に保持する役割がある。<br>
         RAMは揮発性メモリ(電源を落とすとデータが消えてしまうメモリ)であるが、epromやpromなどと違い理論上無限回書き込みが行える。
 
 
         <header>
-            <h3 id="section2">どうやってRAMを作るか思考する</h3>
+            <h3 id="section2">どうやってレジスタを作るか思考する</h3>
         </header>
-        8byteメモリを作るには次のことを考えなくてはいけない。
+        8byteレジスタを作るには次のことを考えなくてはいけない。
         <ul>
             <li>
-                どのICを使うのか
+                どのような仕組みでデータを保持するのか
             </li>
             <li>
                 何に配線するのか
@@ -58,24 +58,10 @@
         </ul>
         <header>
             <h4>
-                ICについて
+                保持の仕組みについて
             </h4>
         </header>
-        メモリとして使うことができるICは以下の3つである。
-        <ul>
-            <li>
-                RS-latch
-            </li>
-            <li>
-                D-latch
-            </li>
-            <li>
-                D-flipflop
-            </li>
-            <li>
-                JK-flipflop
-            </li>
-        </ul>
+        記憶の保持にはJK-flipflopやRS-latchなどいろいろな方法があるが、
         今回はこれらの回路の中でも一番扱いやすいD-flipflop(個人の感想です)を使っていこうと思う。<br>
         汎用ロジックICにおいて、74HC74がD-flipflop回路にあたる。<br>
         <figure>
@@ -92,30 +78,7 @@
                 配線と規模について
             </h4>
         </header>
-        8byteメモリを配線するつまり、32個の74HC74を配線するのは簡単ではなく、回路の規模も大きくなる。<br>
-        とりあえず4bitメモリをユニバーサル基板上で再現する。<br>
-        <figure>
-            <img src="kiban1.png">
-            <figcaption>
-                4bitメモリ
-            </figcaption>
-        </figure>
         
-        実際に配線して感じたことは<strong>大変すぎ!!</strong>この一言に尽きる。<br>
-        4bitの配線を組むだけでほぼ8時間かかった。さらに、必要な基板数はおよそ8枚。
-        CPU製作において、メモリだけで8段も使ってしまうと今ある基板だけでは足りず、
-        追加で購入しなくてはならないうえに、配線だけで多くの時間を浪費してしまう。
-        そこで小型化と配線の簡略化とロマンのために、<strong>空中配線</strong>を採用することにした。<br>
-        <header>
-            <h3 id="section3">空中配線していく</h3>
-        </header>
-        <figure>
-            <img src="2byte.png">
-            <figcaption>
-                2byte分
-            </figcaption>
-        </figure>
-
         <header>
             <h3 id="section4">筐体を作る</h3>
         </header>
@@ -124,7 +87,7 @@
         では、どうしたらいいだろうか。<br>
         <strong>そうだ、筐体を作ろう</strong><br>
         メモリはLEDで光るから、その光が見やすいように筐体の柱は細めに、でも強度は必要…<br>
-        いろいろ考えた結果、Unidyで真鍮線を買ってきた。<br>
+        いろいろ考えた結果、Unidyで真鍮線を買った。<br>
         まずは設計。<br>
         八角柱の筐体を作ることにした。設計図は以下の通り。(カス設計ですまん)
         <figure>
@@ -133,7 +96,7 @@
                 設計図
             </figcaption>
         </figure>
-        真鍮線に印をつけて切り出し、
+        真鍮線に印をつけて切り出し、設計図の通りに組み立てると…
         <figure>
             <img class="imgbox" src="kyoutai.png">
             <figcaption>
