@@ -6,8 +6,6 @@
         <title>
         NT東京の展示物開設
         </title>
-        <script type="text/javascript"src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
-        </script>
     </head>
     <body>
         <main>
@@ -33,9 +31,7 @@
             (今回は、2の補数をとる回路を制作したものの配線不足及び、配線長の増加に伴う信号の不安定化により断念)
             比較器では同じ桁の数値を比較し、その結果を最高位bitから最下位bitにかけて、
             値が同じならば出力を0にして、値が異なるならば大きい値をとる方の出力を1、
-            小さい方を0にして、下位bitの比較結果の全てを無効にするようにすれば比較が行える。
-            n桁目において
-            $\frac{1}{2}$
+            小さい方を0にして、下位bitの比較結果の全てを無効にするようにして比較を行っています。
             またデータを一時的に保存するためのレジスタ(緑色の基板)も作成したものの
             データの入出力を制御する回路が未完成のため計算機にはまだ実装していません。
             <figure>
@@ -65,13 +61,49 @@
         </section>
         <section>
             <h3>
-
-            </h3>
-        </section>
-        <section>
-            <h3>
                 販売物
             </h3>
+            <ul>
+                <li>
+                    <h4>
+                        はんだ付け練習基板
+                    </h4>
+                    これまでに作ってきたミス基板です。<br>
+                    はんだ付けの練習に使ってください。
+                </li>
+                <li>
+                    <h4>
+                        比較回路基板
+                    </h4>
+                    必要以上に届いた基板です。<br>
+                    前述の計算機に使う比較回路と全く同じです。
+                </li>
+                <li>
+                    <h4>
+                        tinyAVR X04用基板
+                    </h4>
+                    <a src="https://mcbeeringi.github.io/?pcb_tx04_rts_inverted">詳しくはこちら</a>
+                </li>
+                <li>
+                    <h4>
+                        PD_fix
+                    </h4>
+                    <figure>
+                        <figcaption>
+                            抵抗値と出力電圧
+                        </figcaption>
+                        <img src="ch221k.png">
+                    </figure>
+                    <figure>
+                        <img src="221k_circuit.png">
+                        <figcaption>
+                            回路図
+                        </figcaption>
+                    </figure>
+                    <a src="https://mcbeeringi.github.io/?pcb_pd_fix">詳しくはこちら</a>
+                </li>
+            </ul>
+            
         </section>
     </main>
     </body>
