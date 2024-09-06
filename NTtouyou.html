@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head><meta http-equiv="Content-Type"
+        content="text/html; charset=UTF-8">
+        <link href="style.css" rel="stylesheet" />
+        <title>
+        NT東京の展示物開設
+        </title>
+        <script type="text/javascript"src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+        </script>
+    </head>
+    <body>
+        <main>
+    <header>
+        <h2 class="box1">
+            展示物開設サイト
+        </h2>
+    </header>
+    <div class="box3">
+        皆さん初めまして電気通信大学1年のterrariaです。<br>
+        展示を見ていただきありがとうございます。<br>
+        このサイトでは、展示物に関する簡単な解説を行います。<br>
+    </div>
+
+        <section>
+            <h3>
+                計算機
+            </h3>
+            今回展示する計算機は加算および比較が行える回路となっています。
+            加算器は4bitの全加算器(ICが5個ついている黒い回路基板)で下位bit加算基板の繰り上げを
+            上位bit加算基板につなげることで任意のbit数の加算を実現しています。
+            さらに2の補数をとる回路を実装し、負の数も表現できるようにする予定です。
+            (今回は、2の補数をとる回路を制作したものの配線不足及び、配線長の増加に伴う信号の不安定化により断念)
+            比較器では同じ桁の数値を比較し、その結果を最高位bitから最下位bitにかけて、
+            値が同じならば出力を0にして、値が異なるならば大きい値をとる方の出力を1、
+            小さい方を0にして、下位bitの比較結果の全てを無効にするようにすれば比較が行える。
+            n桁目において
+            $\frac{1}{2}$
+            またデータを一時的に保存するためのレジスタ(緑色の基板)も作成したものの
+            データの入出力を制御する回路が未完成のため計算機にはまだ実装していません。
+            <figure>
+                <img src="adder.png">
+                <figcaption>
+                    全加算器
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="2.png">
+                <figcaption>
+                    2の補数をとる回路
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="memory_logic.png">
+                <figcaption>
+                    レジスタ
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="comparison.png">
+                <figcaption>
+                    比較器
+                </figcaption>
+            </figure>
+        </section>
+        <section>
+            <h3>
+
+            </h3>
+        </section>
+        <section>
+            <h3>
+                販売物
+            </h3>
+        </section>
+    </main>
+    </body>
+</html>
