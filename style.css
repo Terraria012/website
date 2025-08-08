@@ -21,11 +21,11 @@ h3 {
 
 body {
     color: black;
-    background: rgb(255, 255, 255);
+    background: #d6ebff;
     margin-left: 100px; 
     margin-right: 100px;
-
 }
+
 
 main {
     padding: 0.2em 0.5em;
@@ -52,10 +52,24 @@ main p {
 
 img {
     max-width: 800px;
-    max-height: 200px;
+    max-height: 400px;
 }
 
 .imgbox {
     max-width: 300px;
     max-height: 700px;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+figcaption {
+text-align: center;
+}
+
+.box3 {
+    text-align: center;
 }
